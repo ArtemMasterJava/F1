@@ -12,7 +12,7 @@ import java.util.List;
  * Created by USER on 27.05.2015.
  */
 public class Road extends JPanel implements ActionListener, Runnable {
-    Image img = new ImageIcon("res/road.png").getImage();
+    Image img = new ImageIcon(getClass().getClassLoader().getResource("res/road.png")).getImage();
     Player p = new Player();
     Timer mainTimer = new Timer(20, this);
     List<Enemy> enemies = new ArrayList<Enemy>();
@@ -75,7 +75,7 @@ public class Road extends JPanel implements ActionListener, Runnable {
     }
 
     private void testWin() {
-        if (p.s > 100000) {
+        if (p.s > 50000) {
             JOptionPane.showMessageDialog(null, "You win!!!");
             System.exit(0);
         }

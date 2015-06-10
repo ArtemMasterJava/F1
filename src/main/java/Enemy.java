@@ -8,7 +8,7 @@ public class Enemy {
     int x;
     int y;
     int v;
-    Image img = new ImageIcon("res/enemy.png").getImage();
+    Image img = new ImageIcon(getClass().getClassLoader().getResource("res/enemy.png")).getImage();
     Road road;
 
 
